@@ -1,0 +1,31 @@
+# OS files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# Environment files — never commit secrets
+.env
+*.env.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Build outputs (each sub-project has its own gitignore too)
+frontend/dist/
+frontend/node_modules/
+backend/__pycache__/
+backend/*.pyc
+backend/venv/
+backend/.venv/
