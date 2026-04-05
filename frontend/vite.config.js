@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// Proxy is used ONLY in local development.
+// In production (Vercel), VITE_API_URL env var points directly to Render.
 export default defineConfig({
   plugins: [react()],
   server: {

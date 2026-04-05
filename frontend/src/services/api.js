@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = '';  // Vite proxy forwards to http://localhost:8000
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://ai-chatbot-p5rc.onrender.com';
 
 // Axios instance
 const api = axios.create({
@@ -56,7 +56,7 @@ export const streamChat = async (
   const token = localStorage.getItem('token');
 
   try {
-    const response = await fetch('/chat', {
+    const response = await fetch(`${BASE_URL}/chat`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
